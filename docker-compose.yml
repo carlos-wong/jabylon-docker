@@ -3,10 +3,10 @@ version: '2'
 services:
   server:
     image: svogt/jabylon:latest
-    volumes:
-      - ./home:/home
     ports:
-      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./jabylon:/root/jabylon
     logging:
       driver: "json-file"
       options:
